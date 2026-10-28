@@ -15,6 +15,32 @@
 </style>
 </head>
 <body>
+
+<button onclick="testRockAI()" style="padding:15px;background:#e32636;color:white;border:0;border-radius:10px;font-size:18px;">
+  🎸 Test RockAI
+</button>
+ 
+<script>
+const ROCKAI_SERVER = "https://rockai.djoeywilco.workers.dev";
+
+async function testRockAI() {
+  try {
+    const response = await fetch(ROCKAI_SERVER, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt: "Energetic hard rock instrumental with electric guitars and drums"
+      })
+    });
+
+    const result = await response.json();
+    alert(JSON.stringify(result, null, 2));
+  } catch (error) {
+    alert("RockAI kon de server niet bereiken. Controleer de serverinstellingen.");
+  }
+}
+</script>
+
 <div class="app">
 <header class="top">
  <div class="brand"><div class="logo">⚡</div><div>RockAI<div class="tag">JOUW ROCK. JOUW GELUID.</div></div></div>
