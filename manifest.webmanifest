@@ -1,0 +1,13 @@
+{
+  "name": "RockAI - Jouw rock. Jouw geluid.",
+  "short_name": "RockAI",
+  "description": "Een mobiele studio om rockideeën en songteksten te bewaren.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111114",
+  "theme_color": "#111114",
+  "icons": [
+    {"src":"icons/rockai.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

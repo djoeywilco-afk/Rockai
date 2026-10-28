@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111114">
+<meta name="description" content="RockAI — maak rocknummers met jouw ideeën en teksten.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/rockai.svg" type="image/svg+xml">
+<title>RockAI — Jouw rock. Jouw geluid.</title>
+<style>
+:root{--bg:#111114;--panel:#1b1b21;--panel2:#23232b;--text:#f5f4f7;--muted:#a6a5b0;--red:#ff3b3b;--red2:#b91525;--line:#34343d;--green:#72e3a0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#351319 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:auto;padding:0 18px 100px}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line);gap:12px}.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900;letter-spacing:-.6px}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--red),#781220);font-size:22px;box-shadow:0 5px 24px #ff3b3b30}.tag{color:var(--muted);font-size:12px}.nav{display:flex;gap:8px}.nav button,.secondary{background:transparent;color:var(--text);border:1px solid var(--line);padding:10px 13px;border-radius:12px}.nav button.active{background:var(--panel2);border-color:#6d353b}.hero{padding:30px 0 22px}.eyebrow{color:#ff7777;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.02;letter-spacing:-2px;margin:9px 0 12px}.hero h1 span{color:var(--red)}.hero p{color:var(--muted);max-width:610px;margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:18px}.panel{background:linear-gradient(180deg,#1d1d24,#18181d);border:1px solid var(--line);border-radius:20px;padding:20px;min-width:0}.panel h2{margin:0 0 5px;font-size:20px}.sub{color:var(--muted);font-size:13px;margin:0 0 18px}.field{margin:15px 0}.field label{display:block;font-weight:750;font-size:13px;margin-bottom:7px}.field small{color:var(--muted);display:block;margin-top:6px;font-size:12px}input,textarea,select{width:100%;color:var(--text);background:#101014;border:1px solid #3a3a45;border-radius:12px;padding:12px 13px;outline:none}input:focus,textarea:focus,select:focus{border-color:#ff5555;box-shadow:0 0 0 3px #ff3b3b18}textarea{resize:vertical;min-height:100px}#lyrics{min-height:175px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);background:#15151a;color:#d5d4dc;border-radius:999px;padding:8px 11px;font-size:12px}.chip.selected{background:#4a1b22;border-color:#ff5555;color:#fff}.primary{border:0;border-radius:13px;padding:13px 16px;background:linear-gradient(135deg,#ff4b4b,#bf1729);color:white;font-weight:850;box-shadow:0 7px 20px #ff3b3b22}.primary:disabled{opacity:.45;cursor:not-allowed}.full{width:100%}.notice{border:1px solid #604a25;background:#302716;color:#f7dca1;padding:12px;border-radius:12px;font-size:12px}.muted{color:var(--muted)}.preview{display:flex;flex-direction:column;gap:14px}.cover{min-height:190px;border-radius:16px;background:radial-gradient(circle at 75% 20%,#ff4a4a77,transparent 30%),linear-gradient(135deg,#40151d,#15151b 70%);display:flex;align-items:flex-end;padding:18px;position:relative;overflow:hidden}.cover:after{content:"♫";position:absolute;right:18px;top:-20px;font-size:150px;color:#ffffff0b;font-weight:900}.cover h3{font-size:24px;margin:0;position:relative;z-index:1}.cover p{margin:3px 0 0;color:#d2aeb1;font-size:12px;position:relative;z-index:1}.trackline{height:5px;background:#393943;border-radius:99px;overflow:hidden}.trackline span{display:block;width:0;height:100%;background:var(--red);transition:width .2s}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{flex:1}.listhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0 12px}.songs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.song{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:14px}.song h3{margin:0 0 3px;font-size:16px;overflow-wrap:anywhere}.song p{margin:0;color:var(--muted);font-size:12px}.song .actions{margin-top:12px}.song .actions button{font-size:12px;padding:8px}.empty{border:1px dashed #42424c;color:var(--muted);padding:22px;border-radius:14px;text-align:center;grid-column:1/-1}.footer{color:#777681;font-size:11px;text-align:center;padding:28px 0}.hidden{display:none!important}.status{font-size:12px;color:var(--green);min-height:18px;margin-top:8px}.tabs{display:flex;gap:8px;margin:18px 0}.tabs button{flex:1}.bottomnav{display:none}
+@media(max-width:760px){.app{padding:0 13px 92px}.top{align-items:flex-start}.brand{font-size:19px}.nav button{padding:8px;font-size:12px}.layout{grid-template-columns:1fr}.hero{padding-top:24px}.panel{padding:16px}.songs{grid-template-columns:1fr}.bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#15151aee;backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:9px max(12px,env(safe-area-inset-left)) calc(9px + env(safe-area-inset-bottom));gap:8px;z-index:5}.bottomnav button{flex:1;background:transparent;border:0;color:var(--muted);padding:8px 3px;border-radius:10px;font-size:11px}.bottomnav button.active{color:white;background:#34343c}.top .nav{display:none}.twocol{grid-template-columns:1fr 1fr}.hero h1{letter-spacing:-1.5px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">⚡</div><div>RockAI<div class="tag">JOUW ROCK. JOUW GELUID.</div></div></div>
+ <nav class="nav"><button class="active" data-view="create">Maken</button><button data-view="library">Mijn nummers</button><button data-view="about">Over RockAI</button></nav>
+</header>
+<section class="hero">
+ <div class="eyebrow">Voor de luiddenkers</div>
+ <h1>Maak herrie.<br><span>Maak iets van jou.</span></h1>
+ <p>Werk je rockidee uit, schrijf je eigen tekst en bewaar je nummers. De basis is klaar voor een koppeling met een echte muziekgenerator.</p>
+</section>
+<section id="view-create">
+<div class="layout">
+ <main class="panel">
+  <h2>Nieuw rocknummer</h2><p class="sub">Geef je idee vorm. Je kunt het later altijd aanpassen.</p>
+  <div class="field"><label for="title">Titel van je nummer</label><input id="title" maxlength="90" placeholder="Bijv. Niemand krijgt mij klein"></div>
+  <div class="field"><label>Rockstijl</label><div class="chips" id="genres">
+   <button class="chip selected" data-genre="Hardrock">Hardrock</button><button class="chip" data-genre="Metal">Metal</button><button class="chip" data-genre="Punkrock">Punkrock</button><button class="chip" data-genre="Alternative rock">Alternative rock</button><button class="chip" data-genre="Classic rock">Classic rock</button><button class="chip" data-genre="Poprock">Poprock</button><button class="chip" data-genre="Grunge">Grunge</button><button class="chip" data-genre="Bluesrock">Bluesrock</button>
+  </div></div>
+  <div class="twocol">
+   <div class="field"><label for="mood">Sfeer</label><select id="mood"><option>Rauw en energiek</option><option>Donker en zwaar</option><option>Emotioneel en groots</option><option>Rebels en snel</option><option>Melodisch en hoopvol</option><option>Live en ruig</option></select></div>
+   <div class="field"><label for="voice">Zang</label><select id="voice"><option>Mannelijke zang</option><option>Vrouwelijke zang</option><option>Schreeuwzang en clean</option><option>Meerstemmig</option><option>Instrumentaal</option></select></div>
+  </div>
+  <div class="field"><label for="prompt">Beschrijf het geluid</label><textarea id="prompt" placeholder="Bijv. dikke vervormde gitaren, stevige drums, een pakkend refrein en een gitaarsolo."></textarea><small>Tip: beschrijf het gevoel en de instrumenten. Noem liever geen artiest als exacte kopie.</small></div>
+  <div class="field"><label for="lyrics">Jouw songtekst</label><textarea id="lyrics" placeholder="[Couplet 1]&#10;Ik loop mijn eigen weg...&#10;&#10;[Refrein]&#10;Ik geef niet op..."></textarea><small>Je tekst blijft van jou. Je kunt ook eerst alleen een idee opslaan.</small></div>
+  <button class="primary full" id="saveSong">♫ Bewaar mijn nummer</button><div class="status" id="saveStatus" role="status"></div>
+ </main>
+ <aside class="panel preview">
+  <div><h2>Jouw rockstudio</h2><p class="sub">Een overzicht van je huidige idee.</p></div>
+  <div class="cover"><div><h3 id="previewTitle">Jouw nieuwe nummer</h3><p id="previewMeta">Hardrock · Rauw en energiek</p></div></div>
+  <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:7px"><span class="muted">Audiogeneratie</span><span style="color:#ff8888">Nog niet aangesloten</span></div><div class="trackline"><span></span></div></div>
+  <div class="notice"><strong>Even eerlijk:</strong> deze versie bewaart je ideeën en songteksten. Voor echte audio met zang en gitaren is een muziekgeneratorserver nodig. Die kan niet veilig of eerlijk als onbeperkt gratis worden beloofd.</div>
+  <div class="actions"><button class="secondary" id="exportTxt">Exporteer tekst</button><button class="secondary" id="clearForm">Leegmaken</button></div>
+  <p class="muted" style="font-size:12px;margin:0">Je opgeslagen ideeën blijven op dit apparaat in deze browser staan.</p>
+ </aside>
+</div>
+<div class="listhead"><div><h2 style="margin:0">Recent gemaakt</h2><div class="muted" style="font-size:12px">Je laatste ideeën</div></div><button class="secondary" data-view="library">Alles bekijken →</button></div>
+<div id="recentSongs" class="songs"></div>
+</section>
+<section id="view-library" class="hidden">
+ <div class="listhead"><div><h2 style="margin:0">Mijn nummers</h2><div class="muted" style="font-size:12px">Alles wat je op dit apparaat hebt bewaard.</div></div><button class="secondary" id="newSong">+ Nieuw</button></div>
+ <div id="allSongs" class="songs"></div>
+</section>
+<section id="view-about" class="hidden">
+ <div class="panel"><h2>Over RockAI</h2><p>RockAI is een eenvoudige mobiele rockstudio om ideeën en eigen songteksten te bewaren.</p><h3>Wat werkt nu?</h3><ul><li>Rockstijl, sfeer en zangvoorkeur kiezen</li><li>Songteksten schrijven en exporteren</li><li>Ideeën lokaal bewaren, opnieuw openen en verwijderen</li><li>Installeren als webapp op een Android-telefoon</li></ul><h3>Wat moet nog worden aangesloten?</h3><p>De echte AI-audiogeneratie. Daarvoor is een betrouwbare muziek-AI-dienst en een server nodig. Een API-sleutel hoort op de server en niet in de app of in een openbare GitHub-repository.</p><p class="muted">RockAI belooft geen onbeperkte gratis audio zolang de kosten en limieten van zo'n dienst niet vaststaan.</p></div>
+</section>
+<div class="footer">RockAI · Gemaakt voor jouw eigen geluid · Bewaar regelmatig een export van je teksten.</div>
+</div>
+<nav class="bottomnav"><button class="active" data-view="create">⚡<br>Maken</button><button data-view="library">♫<br>Mijn nummers</button><button data-view="about">ⓘ<br>Over</button></nav>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const STORE='rockai.songs.v2';let genre='Hardrock',songs=[];
+try{songs=JSON.parse(localStorage.getItem(STORE)||'[]');if(!Array.isArray(songs))songs=[]}catch{songs=[]}
+const escapeHTML=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function getForm(){return {id:Date.now().toString(),title:$('#title').value.trim()||'Naamloos rocknummer',genre,mood:$('#mood').value,voice:$('#voice').value,prompt:$('#prompt').value.trim(),lyrics:$('#lyrics').value.trim(),updated:new Date().toISOString()}}
+function updatePreview(){ $('#previewTitle').textContent=$('#title').value.trim()||'Jouw nieuwe nummer';$('#previewMeta').textContent=genre+' · '+$('#mood').value; }
+$('#title').addEventListener('input',updatePreview);$('#mood').addEventListener('change',updatePreview);
+$('#genres').addEventListener('click',e=>{const b=e.target.closest('[data-genre]');if(!b)return;genre=b.dataset.genre;$$('[data-genre]').forEach(x=>x.classList.toggle('selected',x===b));updatePreview()});
+function save(){const s=getForm();if(!s.prompt&&!s.lyrics){$('#saveStatus').textContent='Vul eerst een idee of songtekst in.';return}const idx=songs.findIndex(x=>x.id===s.id);if(idx>=0)songs[idx]=s;else songs.unshift(s);try{localStorage.setItem(STORE,JSON.stringify(songs));$('#saveStatus').textContent='Opgeslagen op dit apparaat!';render()}catch{$('#saveStatus').textContent='Opslaan lukt niet. Mogelijk is je browseropslag vol.'}}
+$('#saveSong').addEventListener('click',save);
+function loadSong(id){const s=songs.find(x=>x.id===id);if(!s)return;$('#title').value=s.title;genre=s.genre||'Hardrock';$$('[data-genre]').forEach(x=>x.classList.toggle('selected',x.dataset.genre===genre));$('#mood').value=s.mood||'Rauw en energiek';$('#voice').value=s.voice||'Mannelijke zang';$('#prompt').value=s.prompt||'';$('#lyrics').value=s.lyrics||'';updatePreview();showView('create');$('#saveStatus').textContent='Idee geopend. Pas aan en bewaar opnieuw.';window.scrollTo({top:0,behavior:'smooth'})}
+function deleteSong(id){if(!confirm('Dit nummer verwijderen?'))return;songs=songs.filter(x=>x.id!==id);localStorage.setItem(STORE,JSON.stringify(songs));render()}
+function card(s){return `<article class="song"><h3>${escapeHTML(s.title)}</h3><p>${escapeHTML(s.genre)} · ${new Date(s.updated).toLocaleDateString('nl-NL')}</p><p style="margin-top:8px">${escapeHTML((s.prompt||s.lyrics||'Geen beschrijving').slice(0,105))}</p><div class="actions"><button class="secondary" data-open="${escapeHTML(s.id)}">Openen</button><button class="secondary" data-export="${escapeHTML(s.id)}">Tekst</button><button class="secondary" data-delete="${escapeHTML(s.id)}">Verwijderen</button></div></article>`}
+function render(){const html=songs.map(card).join('')||'<div class="empty">Nog geen nummers bewaard. Maak je eerste rockidee!</div>';$('#recentSongs').innerHTML=songs.slice(0,4).map(card).join('')||html;$('#allSongs').innerHTML=html}
+document.body.addEventListener('click',e=>{const o=e.target.closest('[data-open]'),d=e.target.closest('[data-delete]'),x=e.target.closest('[data-export]');if(o)loadSong(o.dataset.open);if(d)deleteSong(d.dataset.delete);if(x){const s=songs.find(z=>z.id===x.dataset.export);if(s)downloadText(s)}});
+function downloadText(s){const text=`${s.title}\nStijl: ${s.genre}\nSfeer: ${s.mood}\nZang: ${s.voice}\n\nIdee:\n${s.prompt}\n\nSongtekst:\n${s.lyrics}\n`;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.download=(s.title||'rockai-nummer').replace(/[^\p{L}\p{N}_-]+/gu,'_')+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+$('#exportTxt').addEventListener('click',()=>downloadText(getForm()));
+$('#clearForm').addEventListener('click',()=>{if(!confirm('Het formulier leegmaken?'))return;$('#title').value='';$('#prompt').value='';$('#lyrics').value='';$('#mood').selectedIndex=0;$('#voice').selectedIndex=0;genre='Hardrock';$$('[data-genre]').forEach(x=>x.classList.toggle('selected',x.dataset.genre===genre));updatePreview();$('#saveStatus').textContent='';});
+function showView(view){['create','library','about'].forEach(v=>$('#view-'+v).classList.toggle('hidden',v!==view));$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));if(view==='library')render();window.scrollTo({top:0,behavior:'smooth'})}
+$$('[data-view]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.view)));
+$('#newSong').addEventListener('click',()=>showView('create'));render();updatePreview();
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body></html>
